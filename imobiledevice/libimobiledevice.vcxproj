@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B65BD286-B2AE-4B9B-9D4D-9F0FB72FBB89}</ProjectGuid>
+    <RootNamespace>libimobiledevice</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.51106.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./libimobiledevice;./libplist-1.9/include;./usbmuxd-1.0.8/libusbmuxd;./zlib-1.2.7/include;./libxml2-2.9.1/include/libxml2;./libiconv-1.14/include;./libcnary/include;./openssl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_OPENSSL;HAVE_PLIST;STRIP_DEBUG_CODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mingwex.lib;gcc.lib;iconv.lib;z.lib;xml2.lib;libeay32.lib;ssleay32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./libxml2-2.9.1/lib;./libiconv-1.14/lib;./zlib-1.2.7/lib;./openssl/libs;./mingw32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./libimobiledevice;./libplist-1.9/include;./usbmuxd-1.0.8/libusbmuxd;./zlib-1.2.7/include;./libxml2-2.9.1/include/libxml2;./libiconv-1.14/include;./libcnary/include;./openssl/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;HAVE_OPENSSL;HAVE_PLIST;STRIP_DEBUG_CODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mingwex.lib;gcc.lib;iconv.lib;z.lib;xml2.lib;libeay32.lib;ssleay32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./libxml2-2.9.1/lib;./libiconv-1.14/lib;./zlib-1.2.7/lib;./openssl/libs;./mingw32/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libimobiledevice\afc.cpp" />
+    <ClCompile Include="libimobiledevice\debug.cpp" />
+    <ClCompile Include="libimobiledevice\device_link_service.cpp" />
+    <ClCompile Include="libimobiledevice\diagnostics_relay.cpp" />
+    <ClCompile Include="libimobiledevice\file_relay.cpp" />
+    <ClCompile Include="libimobiledevice\heartbeat.cpp" />
+    <ClCompile Include="libimobiledevice\house_arrest.cpp" />
+    <ClCompile Include="libimobiledevice\idevice.cpp" />
+    <ClCompile Include="libimobiledevice\installation_proxy.cpp" />
+    <ClCompile Include="libimobiledevice\lockdown.cpp" />
+    <ClCompile Include="libimobiledevice\misagent.cpp" />
+    <ClCompile Include="libimobiledevice\mobile_image_mounter.cpp" />
+    <ClCompile Include="libimobiledevice\mobilebackup.cpp" />
+    <ClCompile Include="libimobiledevice\mobilebackup2.cpp" />
+    <ClCompile Include="libimobiledevice\mobilesync.cpp" />
+    <ClCompile Include="libimobiledevice\notification_proxy.cpp" />
+    <ClCompile Include="libimobiledevice\property_list_service.cpp" />
+    <ClCompile Include="libimobiledevice\restore.cpp" />
+    <ClCompile Include="libimobiledevice\sbservices.cpp" />
+    <ClCompile Include="libimobiledevice\screenshotr.cpp" />
+    <ClCompile Include="libimobiledevice\service.cpp" />
+    <ClCompile Include="libimobiledevice\userpref.cpp" />
+    <ClCompile Include="libimobiledevice\webinspector.cpp" />
+    <ClCompile Include="libplist-1.9\src\Array.cpp" />
+    <ClCompile Include="libplist-1.9\src\base64.cpp" />
+    <ClCompile Include="libplist-1.9\src\Boolean.cpp" />
+    <ClCompile Include="libplist-1.9\src\bplist.cpp" />
+    <ClCompile Include="libplist-1.9\src\bytearray.cpp" />
+    <ClCompile Include="libplist-1.9\src\Data.cpp" />
+    <ClCompile Include="libplist-1.9\src\Date.cpp" />
+    <ClCompile Include="libplist-1.9\src\Dictionary.cpp" />
+    <ClCompile Include="libplist-1.9\src\hashtable.cpp" />
+    <ClCompile Include="libplist-1.9\src\Integer.cpp" />
+    <ClCompile Include="libplist-1.9\src\Key.cpp" />
+    <ClCompile Include="libplist-1.9\src\Node.cpp" />
+    <ClCompile Include="libplist-1.9\src\plist.cpp" />
+    <ClCompile Include="libplist-1.9\src\ptrarray.cpp" />
+    <ClCompile Include="libplist-1.9\src\Real.cpp" />
+    <ClCompile Include="libplist-1.9\src\String.cpp" />
+    <ClCompile Include="libplist-1.9\src\Structure.cpp" />
+    <ClCompile Include="libplist-1.9\src\xplist.cpp" />
+    <ClCompile Include="libcnary\iterator.cpp" />
+    <ClCompile Include="libcnary\list.cpp" />
+    <ClCompile Include="libcnary\node.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="libcnary\node_iterator.cpp" />
+    <ClCompile Include="libcnary\node_list.cpp" />
+    <ClCompile Include="usbmuxd-1.0.8\libusbmuxd\libusbmuxd.cpp" />
+    <ClCompile Include="usbmuxd-1.0.8\libusbmuxd\sock_stuff.cpp" />
+    <ClCompile Include="usbmuxd-1.0.8\libusbmuxd\utils.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libimobiledevice\afc.h" />
+    <ClInclude Include="libimobiledevice\debug.h" />
+    <ClInclude Include="libimobiledevice\device_link_service.h" />
+    <ClInclude Include="libimobiledevice\diagnostics_relay.h" />
+    <ClInclude Include="libimobiledevice\dirent.h" />
+    <ClInclude Include="libimobiledevice\file_relay.h" />
+    <ClInclude Include="libimobiledevice\heartbeat.h" />
+    <ClInclude Include="libimobiledevice\house_arrest.h" />
+    <ClInclude Include="libimobiledevice\idevice.h" />
+    <ClInclude Include="libimobiledevice\installation_proxy.h" />
+    <ClInclude Include="libimobiledevice\lockdown.h" />
+    <ClInclude Include="libimobiledevice\misagent.h" />
+    <ClInclude Include="libimobiledevice\mobile_image_mounter.h" />
+    <ClInclude Include="libimobiledevice\mobilebackup.h" />
+    <ClInclude Include="libimobiledevice\mobilebackup2.h" />
+    <ClInclude Include="libimobiledevice\mobilesync.h" />
+    <ClInclude Include="libimobiledevice\notification_proxy.h" />
+    <ClInclude Include="libimobiledevice\property_list_service.h" />
+    <ClInclude Include="libimobiledevice\restore.h" />
+    <ClInclude Include="libimobiledevice\sbservices.h" />
+    <ClInclude Include="libimobiledevice\screenshotr.h" />
+    <ClInclude Include="libimobiledevice\service.h" />
+    <ClInclude Include="libimobiledevice\userpref.h" />
+    <ClInclude Include="libimobiledevice\webinspector.h" />
+    <ClInclude Include="libplist-1.9\src\base64.h" />
+    <ClInclude Include="libplist-1.9\src\bytearray.h" />
+    <ClInclude Include="libplist-1.9\src\common.h" />
+    <ClInclude Include="libplist-1.9\src\hashtable.h" />
+    <ClInclude Include="libplist-1.9\src\plist.h" />
+    <ClInclude Include="libplist-1.9\src\ptrarray.h" />
+    <ClInclude Include="usbmuxd-1.0.8\libusbmuxd\sock_stuff.h" />
+    <ClInclude Include="usbmuxd-1.0.8\libusbmuxd\usbmuxd-proto.h" />
+    <ClInclude Include="usbmuxd-1.0.8\libusbmuxd\usbmuxd.h" />
+    <ClInclude Include="usbmuxd-1.0.8\libusbmuxd\utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
