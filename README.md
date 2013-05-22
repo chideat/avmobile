@@ -4,6 +4,10 @@ avmobile(imobiledevice)是基于libimobiledevice跨平台基于苹果各种移�
 
 国内好多苹果手机助手大多是基于该工程修改，然后变成自己的产业，对于那些人，我们只能用"呵呵"来表达
 
+QQ群交流:3597082
+
+irc:freenode#avplayer
+
 官方网站：http://www.libimobiledevice.org/
 
 由于该工程默认是在linux c运行的，对于win32用户使用起来不是非常方便
